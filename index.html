@@ -14,22 +14,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 <script>
-    function getParameters() {
-        let urlString =
-"https://kbordell.github.io?key1=kirsten&key2=kirsten.bordell@impact.com";
-        let paramString = urlString.split('?')[1];
-        let params_arr = paramString.split('&');
-        for(let i = 0; i < params_arr.length; i++) {
-            let pair = params_arr[i].split('=');
-            console.log("Key is:" + pair[0]);
-            console.log("Value is:" + pair[1]);
-        }
-    }
-    </script>
-      <h1>Hello, my name is <span id="key1"></span></h1>
-      <script>
-        let key1 = "name";
-        document.getElementById("key1").innerHTML = key1;
+  const urlParams = new URL(window.location.toLocaleString()).searchParams;
+const name = urlParams.get('key1');
+console.log(name);
+const email = urlParams.get('key2')
+console.log(email);
       </script>
 </body>
 </html>

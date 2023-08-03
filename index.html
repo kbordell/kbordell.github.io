@@ -20,5 +20,11 @@ console.log(name);
 const email = urlParams.get('key2')
 console.log(email);
       </script>
+      <body>
+        <h1>Hello, my name is <span id="name"></span></h1>
+        <script>
+          document.getElementById("name").innerHTML = name;
+        </script>
+      </body>
 </body>
 </html>
